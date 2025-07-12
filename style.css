@@ -1,0 +1,90 @@
+/* Fonte principal */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f9ff;
+  color: #333;
+  margin: 0;
+}
+
+/* Cabeçalho e rodapé */
+header,
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  max-height: 80px;
+}
+
+/* Navegação */
+nav {
+  background-color: #0055aa;
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Botões gerais */
+button {
+  background-color: #0055aa;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+/* Cards e seções */
+.card,
+section,
+.faq,
+.depo,
+.info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Títulos internos */
+h1, h2, h3 {
+  color: #0055aa;
+}
+
+/* Formulários */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
