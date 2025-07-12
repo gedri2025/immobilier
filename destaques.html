@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destaques | Gedri Immobilier</title>
+  <meta name="description" content="Confira os imóveis em destaque da Gedri Immobilier. Lançamentos, oportunidades especiais e alto padrão.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f9ff; margin: 0; color: #333; text-align: center; }
+    header, footer { background: #003366; color: white; padding: 20px; }
+    nav { background: #0055aa; padding: 15px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 30px; max-width: 800px; margin: auto; }
+    .carrossel { position: relative; height: 400px; overflow: hidden; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .carrossel img { width: 100%; height: 400px; object-fit: cover; position: absolute; top: 0; left: 0; transition: opacity 1s ease; opacity: 0; }
+    .carrossel img.active { opacity: 1; }
+    h2 { color: #0055aa; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Gedri Immobilier" style="max-height:80px;" />
+  <h1>Destaques Imobiliários</h1>
+  <p>Oportunidades especiais selecionadas pela Gedri</p>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="imoveis.html">Imóveis</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<main>
+  <div class="carrossel">
+    <img src="https://images.unsplash.com/photo-1588854337118-1c1f9b019ef8?auto=format&q=80" alt="Cobertura de luxo" class="active" />
+    <img src="https://images.unsplash.com/photo-1572120360610-d971b9b48207?auto=format&q=80" alt="Casa pé na areia" />
+    <img src="https://images.unsplash.com/photo-1590165553091-a24c74023f41?auto=format&q=80" alt="Apartamento com varanda gourmet" />
+  </div>
+
+  <h2>Cobertura de luxo – Praia Grande</h2>
+  <p>4 dormitórios, 2 suítes, vista panorâmica para o mar – R$ 1.390.000</p>
+
+  <h2>Casa pé na areia – Itaguá</h2>
+  <p>5 dormitórios, piscina, acesso direto à praia – R$ 2.100.000</p>
+
+  <h2>Apartamento varanda gourmet – Tenório</h2>
+  <p>2 dormitórios, recém reformado, alto padrão – R$ 780.000</p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Gedri Immobilier | Destaques</p>
+</footer>
+
+<script>
+  const imgs = document.querySelectorAll('.carrossel img');
+  let idx = 0;
+  setInterval(() => {
+    imgs.forEach(img => img.classList.remove('active'));
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+  }, 4000);
+</script>
+
+</body>
+</html>
