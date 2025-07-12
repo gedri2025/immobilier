@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imóveis | Gedri Immobilier</title>
+  <meta name="description" content="Lista de imóveis para venda e locação. Compare, filtre e encontre seu imóvel ideal.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f9ff; margin: 0; color: #333; }
+    header, footer { background: #003366; color: white; text-align: center; padding: 20px; }
+    nav { background: #0055aa; padding: 15px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 30px; max-width: 1200px; margin: auto; }
+    .filters { margin-bottom: 20px; text-align: center; }
+    .filters select { padding: 10px; margin: 5px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 6px; height: 180px; object-fit: cover; }
+    .card button { margin-top: 10px; padding: 10px; background: #0055aa; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    .card button:hover { background: #003366; }
+  </style>
+  <script>
+    function aplicarFiltro() {
+      const tipo = document.getElementById('tipo').value;
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.display = (tipo === 'todos' || card.dataset.tipo === tipo) ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Gedri Immobilier" style="max-height:80px;" />
+  <h1>Imóveis Disponíveis</h1>
+  <p>Explore nossas opções para venda e locação</p>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<main>
+  <div class="filters">
+    <label for="tipo">Filtrar por tipo:</label>
+    <select id="tipo" onchange="aplicarFiltro()">
+      <option value="todos">Todos</option>
+      <option value="venda">Venda</option>
+      <option value="locacao">Locação</option>
+    </select>
+  </div>
+
+  <div class="grid">
+    <div class="card" data-tipo="venda">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&q=80" alt="Casa à venda">
+      <h3>Casa com piscina</h3>
+      <p>🏡 3 dormitórios, vista para o mar – R$ 850.000</p>
+      <button onclick="alert('Comparado com outro imóvel')">Comparar</button>
+    </div>
+
+    <div class="card" data-tipo="locacao">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&q=80" alt="Casa para alugar">
+      <h3>Casa mobiliada</h3>
+      <p>🏠 2 dormitórios – R$ 2.500/mês</p>
+      <button onclick="alert('Comparado com outro imóvel')">Comparar</button>
+    </div>
+
+    <div class="card" data-tipo="venda">
+      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&q=80" alt="Apartamento venda">
+      <h3>Apartamento central</h3>
+      <p>🏢 2 dormitórios – R$ 450.000</p>
+      <button onclick="alert('Comparado com outro imóvel')">Comparar</button>
+    </div>
+
+    <div class="card" data-tipo="locacao">
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&q=80" alt="Apartamento aluguel">
+      <h3>Studio equipado</h3>
+      <p>🏡 Centro de Ubatuba – R$ 1.200/mês</p>
+      <button onclick="alert('Comparado com outro imóvel')">Comparar</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Gedri Immobilier | Imóveis</p>
+</footer>
+
+</body>
+</html>
