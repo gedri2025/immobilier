@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel | Gedri Immobilier</title>
+  <meta name="description" content="Painel administrativo visual para simular cadastro de imóveis.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f9ff; margin: 0; color: #333; }
+    header, footer { background: #003366; color: white; text-align: center; padding: 20px; }
+    nav { background: #0055aa; padding: 15px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 30px; max-width: 800px; margin: auto; }
+    form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background: #0055aa;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #003366; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Gedri Immobilier" style="max-height:80px;" />
+  <h1>Painel Visual - Cadastro de Imóveis</h1>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="imoveis.html">Imóveis</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<main>
+  <form>
+    <input type="text" placeholder="Título do imóvel" required />
+    <input type="text" placeholder="Bairro / Região" required />
+    <input type="number" placeholder="Preço (R$)" required />
+    <select>
+      <option value="">Tipo</option>
+      <option value="venda">Venda</option>
+      <option value="locacao">Locação</option>
+    </select>
+    <textarea rows="5" placeholder="Descrição completa"></textarea>
+    <input type="url" placeholder="URL da imagem (Unsplash/Pexels)" />
+    <button type="submit">Simular Cadastro</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 Gedri Immobilier | Painel Visual</p>
+</footer>
+
+</body>
+</html>
