@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gedri Immobilier | Imóveis e Consultoria</title>
+  <meta name="description" content="Gedri Immobilier – Consultoria imobiliária em Ubatuba-SP. Imóveis para venda, locação, avaliação e financiamento. Atendimento exclusivo." />
+  <meta name="keywords" content="imóveis, Ubatuba, locação, venda, consultoria, financiamento, Gedri" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f5f9ff; color: #333; }
+    header { text-align: center; background: #003366; color: white; padding: 20px; }
+    header img { max-height: 80px; margin-bottom: 10px; }
+    nav { display: flex; justify-content: center; gap: 20px; background: #0055aa; padding: 15px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .section { padding: 40px 20px; max-width: 1200px; margin: auto; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .gallery img { width: 100%; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.1); }
+    .filters { text-align: center; margin-bottom: 30px; }
+    .filters button { padding: 10px 20px; margin: 5px; background: #0077cc; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    .filters button:hover { background: #005599; }
+    .contact { background: #eef; padding: 20px; border-radius: 8px; text-align: center; }
+    footer { text-align: center; padding: 20px; background: #003366; color: white; }
+    .blog { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .blog article { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 6px #ccc; }
+    .calculator { text-align: center; margin-top: 30px; }
+    input[type="number"] { padding: 10px; margin: 5px; width: 150px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Gedri Immobilier" />
+  <h1>Gedri Immobilier – Imóveis e Consultoria</h1>
+  <p>Compra • Venda • Locação • Avaliação Mercadológica</p>
+</header>
+
+<nav>
+  <a href="#imoveis">Imóveis</a>
+  <a href="#virtual">Tour Virtual</a>
+  <a href="#regiao">Sobre a Região</a>
+  <a href="#blog">Blog</a>
+  <a href="#financiamento">Financiamento</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="imoveis" class="section">
+  <h2>Imóveis em Destaque</h2>
+  <div class="filters">
+    <button onclick="filter('todos')">Todos</button>
+    <button onclick="filter('venda')">Venda</button>
+    <button onclick="filter('locacao')">Locação</button>
+  </div>
+  <div class="gallery" id="gallery">
+    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&q=80" data-type="venda" alt="Casa à venda">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&q=80" data-type="locacao" alt="Casa para locação">
+    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&q=80" data-type="venda" alt="Apartamento venda">
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&q=80" data-type="locacao" alt="Apartamento locação">
+  </div>
+</section>
+
+<section id="virtual" class="section">
+  <h2>Tour Virtual</h2>
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/dBrjMUnGzfI" title="Tour Virtual" allowfullscreen></iframe>
+</section>
+
+<section id="regiao" class="section">
+  <h2>Ubatuba-SP</h2>
+  <p>Localização privilegiada com natureza exuberante, praias paradisíacas, acesso rodoviário e comércio em expansão. Próxima a escolas, mercados e transporte público.</p>
+  <iframe src="https://maps.google.com/maps?q=ubatuba%20sp&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
+</section>
+
+<section id="blog" class="section">
+  <h2>Blog Imobiliário</h2>
+  <div class="blog">
+    <article>
+      <h3>Como escolher o imóvel ideal</h3>
+      <p>Veja dicas práticas para avaliar localização, estrutura, documentação e potencial de valorização.</p>
+    </article>
+    <article>
+      <h3>Tendências do mercado em 2025</h3>
+      <p>Descubra como as cidades litorâneas estão atraindo investimentos e compradores em busca de qualidade de vida.</p>
+    </article>
+  </div>
+</section>
+
+<section id="financiamento" class="section">
+  <h2>Simulador de Financiamento</h2>
+  <div class="calculator">
+    <input type="number" id="valor" placeholder="Valor do imóvel (R$)">
+    <input type="number" id="entrada" placeholder="Entrada (R$)">
+    <input type="number" id="parcelas" placeholder="Nº de parcelas">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+  </div>
+</section>
+
+<section id="contato" class="section contact">
+  <h2>Fale Conosco</h2>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/5512992240220" target="_blank">(12) 99224-0220</a></p>
+  <p><strong>Email:</strong> <a href="mailto:gedri@creci.org.br">gedri@creci.org.br</a></p>
+  <p>📍 Ubatuba - São Paulo, Brasil</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Gedri Immobilier – Todos os direitos reservados</p>
+</footer>
+
+<script>
+  function filter(tipo) {
+    document.querySelectorAll('#gallery img').forEach(img => {
+      img.style.display = (tipo === 'todos' || img.dataset.type === tipo) ? 'block' : 'none';
+    });
+  }
+
+  function calcular() {
+    const valor = parseFloat(document.getElementById('valor').value);
+    const entrada = parseFloat(document.getElementById('entrada').value);
+    const parcelas = parseInt(document.getElementById('parcelas').value);
+    if (isNaN(valor) || isNaN(entrada) || isNaN(parcelas)) {
+      document.getElementById('resultado').innerText = 'Preencha todos os campos corretamente.';
+      return
+      <img src="data:image/png;base64,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
+              const valorFinanciado = valor - entrada;
+      const parcela = (valorFinanciado * 0.01 * Math.pow(1 + 0.01, parcelas)) / (Math.pow(1 + 0.01, parcelas) - 1);
+      document.getElementById('resultado').innerText = `Valor aproximado da parcela: R$ ${parcela.toFixed(2)}`;
+    }
+  }
+</script>
+
+</body>
+</html>
